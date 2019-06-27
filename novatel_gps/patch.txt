@@ -1,0 +1,2 @@
+1 .novatel_gps/novatel_gps_driver/src/novatel_message_extractor.cpp　ExtractCompleteMessages 函数中：
+修改了在条件if (result > 0)　和if (invalid_ascii_idx != std::string::npos)时的sentence_start的累加ｂｕｇ，防止了二进制信息的丢失
