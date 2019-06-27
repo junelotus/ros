@@ -1,0 +1,4 @@
+nodelet 可以实现统一进程内同时运行多种算法，且算法之间通信开销另拷贝。这个包有2个重要的class：1）提供了实现nodelet插件所必须的基类nodelet：：Nodelet； 2）提供了NodeletLoader类用以实例化nodelet插件。由于nodelets实现了零拷贝，所以常常应用于大数据吞吐量场景，避免了多node通过ROSTCP通信带来的延时问题。
+在创建的代码模块中，编写的cameklist.txt文件用于编译代码生成库，模块中的package.xml中含有另外一个xml配置文件，这个文件中声明了此模块作为插件的名称在class name中，name的格式为packagename/mingcheng ，其中packagename 作为此nodelet插件的roalaunch 名称，在启动文件.launch 中也会用到。
+
+
