@@ -1,0 +1,25 @@
+#message 2051
+novatel_gps_msgs/CommonHeader header
+
+float32 latitude_std
+float32 longitude_std
+float32 altitude_std
+
+float32 north_velocity_std
+float32 east_velocity_std
+float32 up_velocity_std
+
+float32 roll_std
+float32 pitch_std
+float32 azimuth_std
+
+uint32 extended_status
+uint32 EXTENDED_STATUS_POSITION_UPDATE_APPLIED=1
+uint32 EXTENDED_STATUS_PHASE_UPDATE_APPLIED=2
+uint32 EXTENDED_STATUS_ZUPT_APPLIED=4
+uint32 EXTENDED_STATUS_WHEEL_SENSOR_APPLIED=8
+uint32 EXTENDED_STATUS_HEADING_UPDATE_APPLIED=16
+uint32 EXTENDED_STATUS_INS_SOLUTION_CONVERGED=64
+
+uint16 seconds_since_update
+

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="novatel"
+        pkg="nodelet" type="nodelet"
+        args="standalone novatel_gps_driver/novatel_gps_nodelet" output="screen">
+    <rosparam>
+      verbose: false
+      connection_type: tcp
+      device: 10.10.3.10
+      publish_novatel_positions: true
+      publish_imu_messages: false
+      imu_sample_rate: 125.0
+      publish_tf: true
+      zero_start: true
+      odom_frame: novatel_odom
+      base_frame: novatel_imu
+      frame_id: /gps
+    </rosparam>
+  </node>
+</launch>
